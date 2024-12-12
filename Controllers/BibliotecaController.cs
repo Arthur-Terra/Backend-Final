@@ -49,10 +49,10 @@ namespace Biblioteca.Controllers
         }
 
         // POST: api/biblioteca/locar/{id}
-        [HttpPost("locar/{id:int}")]
-        public ActionResult LocarLivro(int id, Locacao novaLocacao)
+        [HttpPost("locar")]
+        public ActionResult LocarLivro(Locacao novaLocacao)
         {
-            var livro = livrosDisponiveis.FirstOrDefault(l => l.Id == id);
+            var livro = livrosDisponiveis.FirstOrDefault(l => l.Id == novaLocacao.Id);
             if (livro == null)
             {
                 return NotFound();
