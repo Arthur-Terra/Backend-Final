@@ -23,6 +23,6 @@ namespace Biblioteca.Models
     {
         public int Id { get; set; }  // ID da locação
         public string NomeLocatario { get; set; } = string.Empty;  // Nome do locatário
-        public int AnoNascimento { get; set; }  // Ano de nascimento do locatário
+        public string AnoNascimento { get; set; } = string.Empty;  // Ano de nascimento do locatário
     }
 }
